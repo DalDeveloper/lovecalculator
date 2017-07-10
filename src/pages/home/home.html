@@ -1,14 +1,33 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Love Calculator
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>Name 1</ion-label>
+    <ion-input type="text" [(ngModel)]="name1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Name 2</ion-label>
+    <ion-input type="text" [(ngModel)]="name2"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<ion-card text-center>
+  <ion-card-header>
+    {{name1 || '???' }} <ion-icon name="heart" color="danger"></ion-icon> {{name2 || '???'}}
+  </ion-card-header>
+  <ion-card-content class="score">
+    {{score}}%
+  </ion-card-content>
+</ion-card>
+
 </ion-content>
